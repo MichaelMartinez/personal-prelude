@@ -1,0 +1,4 @@
+* Prelude Personal Files
+** To Install in your personal dir:
+*** cd into ~/.emacs.d/personal
+*** git clone https://github.com/MichaelMartinez/personal-prelude.git .
