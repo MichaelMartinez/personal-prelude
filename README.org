@@ -1,4 +1,7 @@
 * Prelude Personal Files
+** This is not ideal at all, but prelude is quite nice thus far. 
 ** To Install in your personal dir:
 *** cd into ~/.emacs.d/personal
-*** git clone https://github.com/MichaelMartinez/personal-prelude.git .
+*** git clone https://github.com/MichaelMartinez/personal-prelude.git 
+- remove old files and copy this entire structure
+*** We can now push and pull from this remote... 
