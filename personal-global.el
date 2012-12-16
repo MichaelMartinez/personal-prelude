@@ -15,6 +15,13 @@
 ;; Global white space mode
 (setq prelude-whitespace t)
 
+;; None of these worked set python3 as interpreter
+;; running M-! which python returns: /usr/bin/python
+;; running M-! which python3 returns: /usr/local/bin/python3
+;;(setq python-python-command "/usr/local/bin/python3")
+;;(setenv "PYTHONPATH" "/usr/local/bin/python3")
+
+
 ;; You can also do as I do and keep them in a seperate folder:
 (add-to-list 'load-path "~/.emacs.private")
 ;;Load the password file but don't complain if it doesn't exist
