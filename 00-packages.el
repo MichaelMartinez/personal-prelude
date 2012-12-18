@@ -1,5 +1,6 @@
 ;; My packages
 (setq prelude-packages (append '(evil
+                                 evil-leader
                                  cyberpunk-theme
                                  ) prelude-packages))
 
