@@ -1,4 +1,6 @@
 (scroll-bar-mode 0)
+(require 'powerline)
+(powerline-default)
 
 ;;override zenburn as the default theme
 (load-theme 'zenburn t)
