@@ -4,11 +4,29 @@
 (setq org-startup-indented t)
 (require 'org-inlinetask)
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/DropBox/org")
+;; ln -s ~/org ~/Dropbox/org - linked to enable mobile browsing
+(setq org-directory "~/org")
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/DropBox/org/flagged.org")
+(setq org-mobile-inbox-for-pull "~/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
+;; set org mode publish properties
+(setq org-publish-project-alist
+      '(("html"
+      :base-directory "~/org"
+      :base-extension "org"
+      :publishing-directory "~/org/exports/"
+      :publishing-function org-publish-org-to-html)
+      :style "<link rel=\"stylesheet\"
+                     href=\"org.css\"
+                     type=\"text/css\"/>"
+        ("pdf"
+      :base-directory "~/org"
+      :base-extension "org"
+      :publishing-directory "~/org/exports/"
+      :publishing-function org-publish-org-to-pdf)
+      ("all" :components ("html" "pdf"))))
+
 
 ;; org-todo settings
 
