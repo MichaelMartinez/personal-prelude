@@ -15,6 +15,8 @@
 ;; Global white space mode
 (setq prelude-whitespace t)
 
+(load "~/.emacs.d/vendor/nxhtml/autostart.el")
+
 ;; None of these worked set python3 as interpreter
 ;; running M-! which python returns: /usr/bin/python
 ;; running M-! which python3 returns: /usr/local/bin/python3
