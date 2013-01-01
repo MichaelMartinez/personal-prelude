@@ -15,6 +15,8 @@
 ;; Global white space mode
 (setq prelude-whitespace t)
 
+;; Need to get this file into its own directory
+;; as nxhtml is a giant beast that has tons of options
 (load "~/.emacs.d/vendor/nxhtml/autostart.el")
 
 ;; None of these worked set python3 as interpreter

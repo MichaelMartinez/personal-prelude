@@ -17,15 +17,16 @@
       :base-extension "org"
       :publishing-directory "~/org/exports/"
       :publishing-function org-publish-org-to-html)
-      :style "<link rel=\"stylesheet\"
-                     href=\"org.css\"
-                     type=\"text/css\"/>"
         ("pdf"
       :base-directory "~/org"
       :base-extension "org"
       :publishing-directory "~/org/exports/"
       :publishing-function org-publish-org-to-pdf)
       ("all" :components ("html" "pdf"))))
+;; Style property for org-publish-project-alist
+;;:style "<link rel=\"stylesheet\"
+;;href=\"org.css\"
+;;type=\"text/css\"/>"
 
 
 ;; org-todo settings
