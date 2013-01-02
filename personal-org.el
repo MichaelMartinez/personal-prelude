@@ -10,6 +10,24 @@
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
+;; Keys for the basics
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+;; set the files for agenda
+(setq org-agenda-files
+      (list "~/org/todo.org"
+            "~/org/flagged.org"
+            "~/org/pythonemacs.org"
+            "~/org/notes.org"))
+
+;; Refile targets include this file and any file contributing to the agenda - up to 5 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5))))
+;; Targets start with the file name - allows creating level 1 tasks
+(setq org-refile-use-outline-path (quote file))
+;; Targets complete in steps so we start with filename, TAB shows the next level of targets etc
+(setq org-outline-path-complete-in-steps t)
+
 ;; set org mode publish properties
 (setq org-publish-project-alist
       '(("html"
@@ -28,6 +46,8 @@
 ;;href=\"org.css\"
 ;;type=\"text/css\"/>"
 
+;; flyspell mode for spell checking everywhere
+(add-hook 'org-mode-hook 'turn-on-flyspell 'append)
 
 ;; org-todo settings
 
@@ -60,3 +80,4 @@
               ("SOMEDAY" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "lightgreen" :weight bold)
               ("RESTRUCTURED" :foreground "lightgreen" :weight bold))))
+(provide 'personal-org)

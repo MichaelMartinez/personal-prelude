@@ -5,3 +5,4 @@
 (setq erc-nickserv-passwords
       `((freenode     (("michaelmartinez" . ,freenode-nickone-pass)))
         ))
+(provide 'personal-erc)
