@@ -4,6 +4,10 @@
 - Using prelude in this manner allows us to keep up with the main prelude repo while keeping our local changes 
 ** To Install in your personal dir:
 *** cd into ~/.emacs.d/personal
-*** git clone https://github.com/MichaelMartinez/personal-prelude.git 
-- remove old files and copy this entire structure
+*** git clone https://github.com/MichaelMartinez/personal-prelude.git  
 *** We can now push and pull from this remote... 
+** Dependencies:
+*** NXHTML: https://github.com/emacsmirror/nxhtml
+- `cd ~/emacs/personal/vendor got clone ...`
+*** Andrea Crotti snippets: https://github.com/AndreaCrotti/yasnippet-snippets
+- `cd ~/emacs.d/personal/vendor git clone ...`
