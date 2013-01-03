@@ -1,5 +1,7 @@
 * Prelude Personal Files
-** This is not ideal at all, but prelude is quite nice thus far. 
+** This is not ideal at all, but prelude is quite nice thus far.
+- To install prelude, follow the instructions here: https://github.com/bbatsov/prelude
+- Using prelude in this manner allows us to keep up with the main prelude repo while keeping our local changes 
 ** To Install in your personal dir:
 *** cd into ~/.emacs.d/personal
 *** git clone https://github.com/MichaelMartinez/personal-prelude.git 
