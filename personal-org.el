@@ -3,6 +3,7 @@
 ;; this sets outlines to automatically indent
 (setq org-startup-indented t)
 (require 'org-inlinetask)
+(require 'org-install)
 ;; Set to the location of your Org files on your local system
 ;; ln -s ~/org ~/Dropbox/org - linked to enable mobile browsing
 (setq org-directory "~/org")
@@ -27,13 +28,13 @@
 (setq org-refile-use-outline-path (quote file))
 ;; Targets complete in steps so we start with filename, TAB shows the next level of targets etc
 (setq org-outline-path-complete-in-steps t)
-
+;; basics
 ;; set org mode publish properties
 (setq org-publish-project-alist
       '(("html"
       :base-directory "~/org"
       :base-extension "org"
-      :publishing-directory "~/org/exports/"
+      :publishing-directory "~/blog/michaelmartinez.in/content/pages"
       :publishing-function org-publish-org-to-html)
         ("pdf"
       :base-directory "~/org"
@@ -45,9 +46,11 @@
 ;;:style "<link rel=\"stylesheet\"
 ;;href=\"org.css\"
 ;;type=\"text/css\"/>"
+;; publish
 
 ;; flyspell mode for spell checking everywhere
 (add-hook 'org-mode-hook 'turn-on-flyspell 'append)
+;; spell
 
 ;; org-todo settings
 
@@ -80,4 +83,21 @@
               ("SOMEDAY" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "lightgreen" :weight bold)
               ("RESTRUCTURED" :foreground "lightgreen" :weight bold))))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sh         . t)
+   (emacs-lisp . t)
+   (lisp       . t)
+   (python     . t)))
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-fontify-natively t)
+(setq org-src-tab-acts-natively t)
+;; babel
+
+;; Org-export very, very generic markdown file
+(load "~/.emacs.d/personal/orgmode/contrib/lisp/org-export-generic.el")
+(load "~/.emacs.d/personal/orgmode/markdown.el")
+;; md stuff
+
+;; provide this file for the user
 (provide 'personal-org)
