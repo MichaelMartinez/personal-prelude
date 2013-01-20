@@ -25,4 +25,11 @@
 ;; as nxhtml is a giant beast that has tons of options
 (load "~/.emacs.d/personal/vendor/nxhtml/autostart.el")
 
+;; Jedi for Python setup as described: http://tkf.github.com/emacs-jedi/#configuration
+(setq jedi:setup-keys t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(require 'jedi)
+(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+;; This is required to get jedi to work
+(require 'epc)
 (provide 'personal-global)

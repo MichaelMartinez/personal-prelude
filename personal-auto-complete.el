@@ -8,7 +8,7 @@
  ac-auto-start 2
  ac-override-local-map nil
  ac-use-menu-map t
- ac-candidate-limit 20)
+ ac-set-trigger-key "TAB")
 ;; Default settings
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
