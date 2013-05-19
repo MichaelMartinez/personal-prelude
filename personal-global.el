@@ -7,7 +7,7 @@
       scroll-preserve-screen-position 1)
 
 ;;override zenburn as the default theme
-(load-theme 'zenburn t)
+(load-theme 'molokai t)
 
 ;; this snippet makes emacs automagically indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
@@ -21,9 +21,6 @@
 ;; Global white space mode
 (setq prelude-whitespace t)
 
-;; Need to get this file into its own directory
-;; as nxhtml is a giant beast that has tons of options
-(load "~/.emacs.d/personal/vendor/nxhtml/autostart.el")
 
 ;; Jedi for Python setup as described: http://tkf.github.com/emacs-jedi/#configuration
 (setq jedi:setup-keys t)
